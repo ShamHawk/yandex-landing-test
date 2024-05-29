@@ -1,0 +1,39 @@
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f54932;
+    padding: 18px 0;
+    position: relative;
+    font-family: "Merriweather", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24.2px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.marquee__inner {
+    display: inline-block;
+    white-space: nowrap;
+    transition: transform 0s linear;
+}
+
+.marquee__inner span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee__inner img {
+    vertical-align: middle;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+@media (min-width: 0px) and (max-width: 1279.98px) {
+    .marquee {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}

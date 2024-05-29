@@ -1,0 +1,636 @@
+/* Основной контейнер */
+.tournament-info__first-container {
+    /* Отступы и заполнение */
+    padding: 0 72px;
+    margin-top: 80px;
+
+    /* Сетка */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 64px;
+}
+
+/* Вспомогательный блок */
+.tournament-info__support-block {
+    display: contents;
+}
+
+/* Текстовый блок */
+.tournament-info__first-text {
+    font-family: "Merriweather", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
+/* Красный текст */
+.tournament-info__red-text {
+    color: #f54932;
+}
+
+/* Текст для мобильных устройств */
+.tournament-info__mobile-text {
+    display: none;
+}
+
+/* Изображение в первом контейнере */
+.tournament-info__first-image img {
+    width: 394px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Второй контейнер */
+.tournament-info__second-container {
+    /* Отступы и заполнение */
+    padding: 0 72px;
+    margin-top: 80px;
+
+    /* Сетка */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 17px;
+}
+
+/* Блок для сессий */
+.tournament-info__session-block {
+    display: contents;
+}
+
+/* Текст второго контейнера */
+.tournament-info__second-text {
+    font-family: "Merriweather", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
+/* Красный текст второго контейнера */
+.tournament-info__second-text span {
+    color: #f54932;
+}
+
+/* Изображение во втором контейнере */
+.tournament-info__second-image img {
+    width: 501px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Таблица */
+.tournament-info__grid-table {
+    margin-top: 60px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Ячейки таблицы */
+.tournament-info__grid-table td {
+    padding: 16px 16px 16px 0;
+}
+
+.tournament-info__grid-table tr td {
+    border: 2px solid #d0d0d0;
+}
+
+/* Первая строка таблицы */
+.tournament-info__grid-table tr:first-child td {
+    border-top: none;
+    padding: 0 0 16px 0;
+}
+
+/* Последняя строка таблицы */
+.tournament-info__grid-table tr:last-child td {
+    border-bottom: none;
+    padding: 16px 0 0 0;
+}
+
+/* Ячейка таблицы, первая колонка */
+.tournament-info__grid-table tr td:first-child {
+    border-left: none;
+}
+
+/* Ячейка таблицы, последняя колонка */
+.tournament-info__grid-table tr td:last-child {
+    border-right: none;
+}
+
+/* Текст в левой части таблицы */
+.tournament-info__left-table-text {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-size: 20px;
+    color: #313131;
+    opacity: 70%;
+}
+
+/* Текст в правой части таблицы */
+.tournament-info__right-table-text {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-size: 20px;
+    color: #313131;
+    font-weight: 600;
+    padding-left: 16px;
+}
+
+/* Перечеркнутая цена */
+.tournament-info__crossed-price {
+    text-decoration: line-through;
+    text-decoration-color: #f54932;
+    text-decoration-thickness: 2px;
+    margin-right: 12px;
+}
+
+/* Ссылка для администратора */
+.tournament-info__admin-link {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-size: 20px;
+    color: #3057a2;
+    font-weight: 600;
+    margin-top: 48px;
+}
+
+/* Ссылка внутри блока администратора */
+.tournament-info__admin-link a {
+    text-decoration: none;
+}
+
+@media (min-width: 0px) and (max-width: 479.98px) {
+    /* Общие стили */
+    .tournament-info__first-text,
+    .tournament-info__second-text {
+        font-size: 28px;
+    }
+
+    .tournament-info__left-table-text,
+    .tournament-info__right-table-text {
+        font-size: 20px;
+    }
+
+    .tournament-info__right-table-text {
+        font-weight: 700;
+    }
+
+    .tournament-info__crossed-price {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    /* Стили для первого контейнера */
+    .tournament-info__first-container {
+        gap: 24px;
+        padding: 0 20px;
+        margin-top: 48px;
+        grid-template-columns: 1fr;
+    }
+
+    .tournament-info__first-text {
+        text-align: left;
+        line-height: 32px;
+    }
+
+    .tournament-info__first-image img {
+        width: 394px;
+        margin: 0 auto;
+    }
+
+    .tournament-info__desktop-text {
+        display: none;
+    }
+
+    .tournament-info__mobile-text {
+        display: block;
+    }
+
+    /* Стили для второго контейнера */
+    .tournament-info__second-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin-top: 34px;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .tournament-info__second-image img {
+        margin: 0 auto;
+        width: 335px;
+    }
+
+    .tournament-info__second-text {
+        margin: 0 auto;
+        text-align: left;
+        line-height: 32px;
+    }
+
+    /* Стили таблицы */
+    .tournament-info__grid-table {
+        width: 100%;
+        margin-top: 44px;
+    }
+
+    .tournament-info__td {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .tournament-info__left-table-text {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        padding: 0 0 12px 0;
+    }
+
+    .tournament-info__right-table-text {
+        border-bottom: 2px solid #d0d0d0;
+        padding: 0 0 16px 0 !important;
+    }
+
+    .tournament-info__left-table-text--second,
+    .tournament-info__left-table-text--third,
+    .tournament-info__left-table-text--forth,
+    .tournament-info__left-table-text--fifth {
+        padding-top: 16px;
+    }
+
+    .tournament-info__grid-table tr td {
+        border: none;
+    }
+
+    .tournament-info__grid-table tr:first-child td {
+        border-top: none;
+        padding: 0;
+    }
+
+    .tournament-info__grid-table td {
+        padding: 0;
+    }
+
+    .tournament-info__grid-table tr:last-child td {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    /* Ссылка для администратора */
+    .tournament-info__admin-link {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 575.98px) {
+    /* Общие стили */
+    .tournament-info__first-text,
+    .tournament-info__second-text {
+        font-size: 32px;
+    }
+
+    .tournament-info__left-table-text,
+    .tournament-info__right-table-text {
+        font-size: 20px;
+    }
+
+    .tournament-info__right-table-text {
+        font-weight: 700;
+    }
+
+    .tournament-info__crossed-price {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    /* Стили для первого контейнера */
+    .tournament-info__first-container {
+        gap: 24px;
+        padding: 0 20px;
+        margin-top: 48px;
+        grid-template-columns: 1fr;
+    }
+
+    .tournament-info__first-text {
+        text-align: left;
+        line-height: 32px;
+    }
+
+    .tournament-info__first-image img {
+        width: 394px;
+        margin: 0 auto;
+    }
+
+    .tournament-info__desktop-text {
+        display: none;
+    }
+
+    .tournament-info__mobile-text {
+        display: block;
+    }
+
+    /* Стили для второго контейнера */
+    .tournament-info__second-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        margin-top: 34px;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    .tournament-info__second-image img {
+        margin: 0 auto;
+        width: 335px;
+    }
+
+    .tournament-info__second-text {
+        margin: 0 auto;
+        text-align: left;
+        line-height: 32px;
+    }
+
+    /* Стили таблицы */
+    .tournament-info__grid-table {
+        width: 100%;
+        margin-top: 44px;
+    }
+
+    .tournament-info__td {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .tournament-info__left-table-text {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        padding: 0 0 12px 0;
+    }
+
+    .tournament-info__right-table-text {
+        border-bottom: 2px solid #d0d0d0;
+        padding: 0 0 16px 0 !important;
+    }
+
+    .tournament-info__left-table-text--second,
+    .tournament-info__left-table-text--third,
+    .tournament-info__left-table-text--forth,
+    .tournament-info__left-table-text--fifth {
+        padding-top: 16px;
+    }
+
+    .tournament-info__grid-table tr td {
+        border: none;
+    }
+
+    .tournament-info__grid-table tr:first-child td {
+        border-top: none;
+        padding: 0;
+    }
+
+    .tournament-info__grid-table td {
+        padding: 0;
+    }
+
+    .tournament-info__grid-table tr:last-child td {
+        border-bottom: none;
+        padding: 0;
+    }
+
+    /* Ссылка для администратора */
+    .tournament-info__admin-link {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Общие стили */
+    .tournament-info__first-text,
+    .tournament-info__second-text {
+        font-size: 28px;
+    }
+
+    .tournament-info__left-table-text,
+    .tournament-info__right-table-text,
+    .tournament-info__admin-link {
+        font-size: 20px;
+    }
+
+    .tournament-info__right-table-text {
+        font-weight: 700;
+    }
+
+    .tournament-info__crossed-price {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    /* Стили для первого контейнера */
+    .tournament-info__first-container {
+        gap: 32px;
+        padding: 0 48px;
+        margin-top: 60px;
+        grid-template-columns: 1fr;
+    }
+
+    .tournament-info__first-text {
+        margin: 0 auto;
+        text-align: center;
+        line-height: 32px;
+    }
+
+    .tournament-info__first-image img {
+        width: 394px;
+        margin: 0 auto;
+    }
+
+    .tournament-info__desktop-text {
+        display: none;
+    }
+
+    .tournament-info__mobile-text {
+        display: block;
+    }
+
+    /* Стили для второго контейнера */
+    .tournament-info__second-container {
+        grid-template-columns: 1fr;
+        padding: 0 48px;
+        grid-template-rows: auto auto;
+        margin-top: 60px;
+    }
+
+    .tournament-info__second-image img {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .tournament-info__second-text {
+        margin: 0 auto;
+        text-align: center;
+        line-height: 32px;
+    }
+
+    /* Стили таблицы */
+    .tournament-info__grid-table {
+        width: 100%;
+    }
+
+    .tournament-info__td {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .tournament-info__left-table-text {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 20px;
+        padding: 0 0 12px 0;
+    }
+
+    .tournament-info__right-table-text {
+        border-bottom: 2px solid #d0d0d0;
+        padding: 0 0 16px 0 !important;
+    }
+
+    .tournament-info__left-table-text--second,
+    .tournament-info__left-table-text--third,
+    .tournament-info__left-table-text--forth,
+    .tournament-info__left-table-text--fifth {
+        padding-top: 16px;
+    }
+
+    .tournament-info__grid-table tr td {
+        border: none;
+    }
+
+    .tournament-info__grid-table tr:first-child td {
+        border-top: none;
+        padding: 0;
+    }
+
+    .tournament-info__grid-table td {
+        padding: 0;
+    }
+
+    .tournament-info__grid-table tr:last-child td {
+        border-bottom: none;
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    /* Общие стили */
+    .tournament-info__first-container {
+        gap: 32px;
+        padding: 0 48px;
+        margin-top: 60px;
+    }
+
+    .tournament-info__first-text {
+        font-size: 24px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 32px;
+        align-self: center;
+    }
+
+    .tournament-info__first-image img {
+        width: 300px;
+    }
+
+    .tournament-info__second-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 0 48px;
+        margin-top: 60px;
+    }
+
+    .tournament-info__second-image img {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .tournament-info__second-text {
+        width: 600px;
+        margin: 0 auto;
+        font-size: 24px;
+        text-align: center;
+        line-height: 32px;
+    }
+
+    /* Стили для текста таблицы */
+    .tournament-info__left-table-text {
+        font-size: 18px;
+    }
+
+    /* Стили для правого текста таблицы */
+    .tournament-info__right-table-text,
+    .tournament-info__admin-link {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1299.98px) {
+    /* Общие стили */
+    .tournament-info__first-container {
+        gap: 48px;
+    }
+
+    .tournament-info__first-text {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .tournament-info__first-image img {
+        width: 394px;
+    }
+
+    .tournament-info__second-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .tournament-info__second-image img {
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .tournament-info__second-text {
+        width: 600px;
+        margin: 0 auto;
+        font-size: 28px;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1679.98px) {
+    /* Общие стили */
+    .tournament-info__first-container,
+    .tournament-info__second-container {
+        padding: 0 150px;
+    }
+}
+
+@media (min-width: 1680px) and (max-width: 1799.98px) {
+    .tournament-info__first-container,
+    .tournament-info__second-container {
+        padding: 0 250px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .tournament-info__first-container,
+    .tournament-info__second-container {
+        padding: 0 348px;
+    }
+}

@@ -1,0 +1,370 @@
+/* Общие стили */
+.header {
+    color: #313131;
+    padding: 0 72px;
+    background-image: url("../../images/header_1366.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 700px;
+}
+
+.header__content {
+    max-width: 542px;
+}
+
+.header__logo-container {
+    display: flex;
+    padding-top: 26px;
+}
+
+.header__logo-img {
+    padding-right: 6px;
+}
+
+.header__logo-text {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 147px;
+    text-transform: uppercase;
+    color: #595653;
+    line-height: 18px;
+}
+
+.header__title {
+    margin-top: 62px;
+    color: #313131;
+    font-family: "Merriweather", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.header__title-secondary,
+.header__title-tertiary {
+    text-align: center;
+}
+
+.header__text {
+    margin-top: 24px;
+    font-size: 18px;
+    font-family: "Golos Text", Arial, sans-serif;
+    text-align: center;
+}
+
+.header__buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+    font-family: "Golos Text", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.header__button {
+    align-content: center;
+    text-align: center;
+    width: 263px;
+    border-radius: 66px;
+    text-decoration: none;
+    padding: 13px 49px;
+}
+
+/* Стили для первой кнопки */
+.header__button-first {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.header__button-first:hover {
+    background-color: #fbce51;
+    color: #1f1f1f;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стили для второй кнопки */
+.header__button-second {
+    border: 2px solid #1f1f1f;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+
+.header__button-second:hover {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 0px) and (max-width: 479.98px) {
+    .header {
+        background-image: url("../../images/header_768.png");
+        background-position: bottom;
+        height: 774px;
+        padding: 0 20px;
+    }
+
+    .header__logo-text {
+        font-size: 14px;
+        width: 128px;
+        line-height: 16px;
+    }
+
+    .header__logo-container {
+        padding-top: 18px;
+    }
+
+    .header__logo-img {
+        width: 80px;
+    }
+
+    .header__content {
+        margin: 0 auto;
+        max-width: 335px;
+    }
+
+    .header__title {
+        font-size: 36px !important;
+        margin-top: 40px;
+        font-size: 30px;
+    }
+
+    .header__text {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .header__buttons {
+        font-size: 16px;
+        display: grid;
+        line-height: 20px;
+        margin-top: 32px;
+        gap: 14px;
+    }
+
+    .header__button {
+        width: 335px;
+        white-space: nowrap;
+    }
+
+    /* Уникальные стили для второй кнопки */
+    .header__button-second {
+        background-color: #ffffff;
+        border: none;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 575.98px) {
+    .header {
+        background-image: url("../../images/header_768.png");
+        background-position: bottom;
+        height: 1000px;
+        padding: 0 20px;
+    }
+
+    .header__logo-img {
+        width: 80px;
+    }
+
+    .header__logo-text {
+        font-size: 14px;
+        width: 128px;
+        line-height: 16px;
+    }
+
+    .header__content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .header__title {
+        font-size: 42px !important;
+        margin-top: 30px;
+    }
+
+    .header__text {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .header__buttons {
+        font-size: 16px;
+        display: flex;
+        line-height: 20px;
+        margin-top: 40px;
+    }
+
+    .header__button {
+        width: 292px;
+        padding: 13px 16px;
+    }
+
+    /* Уникальные стили для второй кнопки */
+    .header__button-second {
+        background-color: #ffffff;
+        border: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .header {
+        background-image: url("../../images/header_768.png");
+        background-position: bottom;
+        height: 1100px;
+        padding: 0 48px;
+    }
+
+    .header__logo-img {
+        width: 80px;
+    }
+
+    .header__logo-text {
+        font-size: 14px;
+        width: 128px;
+        line-height: 16px;
+    }
+
+    .header__content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .header__title {
+        font-size: 42px !important;
+        margin-top: 30px;
+    }
+
+    .header__text {
+        font-size: 18px;
+        text-align: left;
+        width: 500px;
+    }
+
+    .header__buttons {
+        font-size: 16px;
+        display: flex;
+        line-height: 20px;
+        margin-top: 40px;
+    }
+
+    .header__button {
+        width: 292px;
+        padding: 13px 20px;
+    }
+
+    /* Уникальные стили для второй кнопки */
+    .header__button-second {
+        background-color: #ffffff;
+        border: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .header {
+        background-position: center;
+        height: 600px;
+        padding: 0 48px;
+    }
+
+    .header__logo-img {
+        width: 80px;
+    }
+
+    .header__logo-text {
+        font-size: 14px;
+        width: 128px;
+        line-height: 16px;
+    }
+
+    .header__content {
+        max-width: 300px;
+    }
+
+    .header__title {
+        margin-top: 30px;
+        font-size: 32px;
+    }
+
+    .header__text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .header__buttons {
+        font-size: 12px;
+        display: grid;
+        line-height: 16px;
+        margin-top: 24px;
+    }
+
+    .header__button {
+        width: 300px;
+        padding: 13px 20px;
+    }
+
+    .header__button-second {
+        background-color: #ffffff;
+        border: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+    .header {
+        background-position: left;
+        height: 600px;
+    }
+
+    .header__content {
+        max-width: 362px;
+    }
+
+    .header__title {
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    .header__text {
+        text-align: left;
+    }
+
+    .header__buttons {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 32px;
+    }
+
+    .header__button {
+        padding: 13px 20px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439.98px) {
+    .header {
+        background-position: center;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1679.98px) {
+    .header {
+        background-image: url(../../images/header_1920.png);
+        background-position: left;
+        padding: 0 150px;
+    }
+}
+
+@media (min-width: 1680px) and (max-width: 1799.98px) {
+    .header {
+        background-image: url(../../images/header_1920.png);
+        background-position: left;
+        padding: 0 250px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .header {
+        background-image: url(../../images/header_1920.png);
+        background-position: left;
+        padding: 0 348px;
+    }
+}

@@ -1,0 +1,529 @@
+.transformation-stages {
+    padding: 0 72px;
+    margin-top: 200px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.transformation-stages__header {
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    max-width: 806px;
+}
+
+.transformation-stages__title {
+    font-family: "Merriweather", Arial, sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.transformation-stages__subtitle {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 280px;
+    color: #3057a2;
+    white-space: nowrap;
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 8px;
+    text-transform: none;
+}
+
+.transformation-stages__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    position: relative;
+}
+
+.transformation-stages__item {
+    background-color: #f5e9dc;
+    padding: 20px;
+    position: relative;
+    background-image: url(../../images/stages-cards-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transformation-stages__number {
+    font-family: "Golos Text", Arial, sans-serif;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+}
+
+.transformation-stages__description {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 14px;
+}
+
+.transformation-stages__item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.transformation-stages__item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.transformation-stages__item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.transformation-stages__item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.transformation-stages__item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.transformation-stages__item:nth-child(6) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.transformation-stages__item:nth-child(7) {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.last__description {
+    max-width: 446px;
+}
+
+.transformation-stages__plane {
+    z-index: 999;
+    position: absolute;
+    bottom: 10px;
+    right: -40px;
+    width: 376px;
+}
+
+.transformation-stages__header-mobile {
+    text-align: left;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.transformation-stages__title-mobile {
+    font-family: "Merriweather", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.transformation-stages__subtitle-mobile {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    width: 400px;
+    color: #3057a2;
+    padding-top: 8px;
+}
+
+.transformation-stages__plane-mobile {
+    position: absolute;
+    z-index: 999;
+    max-width: 335px;
+    bottom: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.transformation-stages__content-mobile {
+    position: relative;
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+.transformation-stages__item-mobile {
+    min-width: 100%;
+    height: 300px;
+    background-color: #f5e9dc;
+    padding: 62px 20px;
+    background-image: url(../../images/stages-cards-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.2s ease;
+    width: 100%;
+}
+
+.transformation-stages__item-mobile.hidden {
+    opacity: 0;
+}
+
+.transformation-stages__item-mobile.visible {
+    opacity: 1;
+}
+
+.description-margin-first {
+    margin-top: 28px;
+}
+
+.description-margin-second {
+    margin-top: 32px;
+}
+
+.description-margin-third {
+    margin-top: 2px;
+}
+
+.transformation-stages__number-mobile {
+    font-family: "Golos Text", Arial, sans-serif;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+}
+
+.transformation-stages__description-mobile {
+    font-family: "Golos Text", Arial, sans-serif;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 14px;
+}
+
+.transformation-stages__progress-mobile {
+    margin-top: 28px;
+    display: none;
+    justify-content: center;
+}
+
+.transformation-stages__control {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.transformation-stages__control:hover {
+    background-color: #fbce51;
+}
+
+.transformation-stages__control img {
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    align-self: center;
+}
+
+.transformation-stages__control--prev {
+    margin-right: 13px;
+}
+
+.transformation-stages__control--next {
+    margin-left: 13px;
+}
+
+.transformation-stages__progress-bar {
+    display: flex;
+}
+
+.transformation-stages__progress-bar img {
+    width: 10px;
+    margin: 0 3px;
+}
+
+.transformation-stages__control-left-img {
+    padding-right: 4px;
+}
+
+.transformation-stages__control-right-img {
+    padding-left: 4px;
+}
+
+@media (min-width: 0px) and (max-width: 479.98px) {
+    .transformation-stages {
+        margin-top: 120px;
+        padding: 0 20px;
+    }
+
+    .transformation-stages__header {
+        display: none;
+    }
+
+    .transformation-stages__header-mobile {
+        display: block;
+        margin-bottom: 148px;
+    }
+    .transformation-stages__content {
+        display: none;
+    }
+
+    .transformation-stages__content-mobile {
+        display: flex;
+    }
+
+    .transformation-stages__progress-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 575.98px) {
+    .transformation-stages {
+        margin-top: 120px;
+        padding: 0 20px;
+    }
+
+    .transformation-stages__header {
+        display: none;
+    }
+
+    .transformation-stages__header-mobile {
+        display: block;
+        margin-bottom: 148px;
+    }
+
+    .transformation-stages__content {
+        display: none;
+    }
+
+    .transformation-stages__content-mobile {
+        display: flex;
+    }
+
+    .transformation-stages__progress-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .transformation-stages {
+        margin-top: 120px;
+        padding: 0 48px;
+    }
+
+    .transformation-stages__header {
+        display: none;
+    }
+
+    .transformation-stages__header-mobile {
+        display: block;
+        margin-bottom: 148px;
+    }
+
+    .transformation-stages__content {
+        display: none;
+    }
+
+    .transformation-stages__content-mobile {
+        display: flex;
+    }
+
+    .transformation-stages__progress-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .transformation-stages {
+        padding: 0 48px;
+        margin-top: 150px;
+    }
+
+    .transformation-stages__content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .transformation-stages__title {
+        max-width: 600px;
+        font-size: 36px;
+    }
+
+    .transformation-stages__subtitle {
+        font-size: 16px;
+    }
+
+    .transformation-stages__item:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .transformation-stages__item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .transformation-stages__item:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .transformation-stages__item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .transformation-stages__item:nth-child(5) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .transformation-stages__item:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .transformation-stages__item:nth-child(7) {
+        grid-column: span 2;
+        grid-row: 4;
+    }
+
+    .transformation-stages__plane {
+        z-index: 999;
+        position: absolute;
+        top: -120px;
+        right: -30px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .last__description {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365.98px) {
+    .transformation-stages {
+        padding: 0 72px;
+        margin-top: 200px;
+    }
+
+    .transformation-stages__content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+
+    .transformation-stages__title {
+        max-width: 600px;
+        font-size: 40px;
+    }
+
+    .transformation-stages__subtitle {
+        font-size: 18px;
+    }
+
+    .transformation-stages__item:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .transformation-stages__item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .transformation-stages__item:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .transformation-stages__item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .transformation-stages__item:nth-child(5) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .transformation-stages__item:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .transformation-stages__item:nth-child(7) {
+        grid-column: span 2;
+        grid-row: 4;
+    }
+
+    .transformation-stages__plane {
+        z-index: 999;
+        position: absolute;
+        top: -120px;
+        right: -50px;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .last__description {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .transformation-stages {
+        padding: 0 150px;
+    }
+
+    .transformation-stages__plane {
+        z-index: 999;
+        right: -100px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .transformation-stages {
+        padding: 0 250px;
+    }
+
+    .transformation-stages__plane {
+        z-index: 999;
+        right: -100px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .transformation-stages {
+        padding: 0 348px;
+    }
+
+    .transformation-stages__plane {
+        z-index: 999;
+        right: -160px;
+    }
+}
