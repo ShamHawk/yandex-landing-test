@@ -45,7 +45,7 @@
     background-color: #f5e9dc;
     padding: 20px;
     position: relative;
-    background-image: url("/images/stages-cards-bg.png");
+    background-image: url("./images/stages-cards-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -166,7 +166,7 @@
     height: 300px;
     background-color: #f5e9dc;
     padding: 62px 20px;
-    background-image: url("/images/stages-cards-bg.png");
+    background-image: url("./images/stages-cards-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     transition: opacity 0.2s ease;
