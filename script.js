@@ -176,8 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
             progressDots.forEach((dot, index) => {
                 dot.src =
                     index === currentIndex
-                        ? "../../images/dot-active.svg"
-                        : "../../images/dot-disabled.svg";
+                        ? "./images/dot-active.svg"
+                        : "./images/dot-disabled.svg";
             });
         };
 
