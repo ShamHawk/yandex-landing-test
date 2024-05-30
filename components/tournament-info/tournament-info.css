@@ -11,7 +11,7 @@
     gap: 64px;
 }
 
-/* Вспомогательный блок */
+/* Блок "поддержать турнир" */
 .tournament-info__support-block {
     display: contents;
 }
@@ -55,7 +55,7 @@
     gap: 17px;
 }
 
-/* Блок для сессий */
+/* Блок "сеанс одновременной игры" */
 .tournament-info__session-block {
     display: contents;
 }
@@ -145,7 +145,7 @@
     margin-right: 12px;
 }
 
-/* Ссылка для администратора */
+/* Ссылка для возникших вопросов */
 .tournament-info__admin-link {
     font-family: "Golos Text", Arial, sans-serif;
     font-size: 20px;
@@ -154,7 +154,6 @@
     margin-top: 48px;
 }
 
-/* Ссылка внутри блока администратора */
 .tournament-info__admin-link a {
     text-decoration: none;
 }

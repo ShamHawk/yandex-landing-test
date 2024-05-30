@@ -1,79 +1,103 @@
 .transformation-stages {
+    /* Устанавливаем отступы по бокам и верхний отступ */
     padding: 0 72px;
     margin-top: 200px;
+    /* Устанавливаем белый фон и скрываем переполнение */
     background-color: #fff;
     overflow: hidden;
 }
 
 .transformation-stages__header {
+    /* Выравнивание текста по левому краю и отступы снизу */
     text-align: left;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    /* Ограничение ширины блока */
     max-width: 806px;
 }
 
 .transformation-stages__title {
+    /* Устанавливаем шрифт, размер, начертание и регистр текста */
     font-family: "Merriweather", Arial, sans-serif;
     font-size: 54px;
     font-weight: 400;
     text-transform: uppercase;
+    /* Позиционирование заголовка относительно родителя */
     position: relative;
 }
 
 .transformation-stages__subtitle {
+    /* Устанавливаем шрифт, начертание, размер и цвет текста */
     font-family: "Golos Text", Arial, sans-serif;
     font-weight: 400;
     font-size: 20px;
-    width: 280px;
     color: #3057a2;
+    /* Устанавливаем ширину и отключаем перенос текста */
+    width: 280px;
     white-space: nowrap;
+    /* Позиционирование подзаголовка относительно родителя */
     position: absolute;
+    /* Отступы внутри элемента */
     padding-left: 20px;
     padding-top: 8px;
+    /* Отключение трансформации текста в верхний регистр */
     text-transform: none;
 }
 
 .transformation-stages__content {
+    /* Устанавливаем сетку с тремя колонками и автоматической высотой строк */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto;
+    /* Устанавливаем промежутки между элементами */
     gap: 20px;
+    /* Позиционирование содержимого относительно родителя */
     position: relative;
 }
 
 .transformation-stages__item {
+    /* Устанавливаем фоновый цвет и отступы внутри блока */
     background-color: #f5e9dc;
     padding: 20px;
+    /* Позиционирование элемента относительно родителя */
     position: relative;
+    /* Устанавливаем фоновое изображение */
     background-image: url("../../images/stages-cards-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .transformation-stages__number {
+    /* Устанавливаем шрифт, размер и цвет текста */
     font-family: "Golos Text", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #313131;
+    /* Устанавливаем размеры и форму круга */
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background-color: #fff;
-    color: #313131;
+    /* Центрируем текст внутри круга */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    font-weight: 600;
+    /* Позиционирование элемента относительно родителя */
     position: absolute;
 }
 
 .transformation-stages__description {
+    /* Устанавливаем шрифт, размер и начертание текста */
     font-family: "Golos Text", Arial, sans-serif;
-    font-weight: 500;
-    margin-left: 40px;
     font-size: 20px;
+    font-weight: 500;
+    /* Отступы и выравнивание текста */
+    margin-left: 40px;
     line-height: 24px;
     padding-left: 14px;
 }
 
+/* Настройка положения элементов на сетке */
 .transformation-stages__item:nth-child(1) {
     grid-column: 1;
     grid-row: 1;
@@ -109,10 +133,12 @@
     grid-row: 3;
 }
 
+/* Ограничение максимальной ширины последнего описания */
 .last__description {
     max-width: 446px;
 }
 
+/* Настройка изображения самолета */
 .transformation-stages__plane {
     z-index: 999;
     position: absolute;
@@ -121,6 +147,7 @@
     width: 376px;
 }
 
+/* Мобильная версия заголовка */
 .transformation-stages__header-mobile {
     text-align: left;
     position: relative;
@@ -129,6 +156,7 @@
     display: none;
 }
 
+/* Мобильная версия заголовка */
 .transformation-stages__title-mobile {
     font-family: "Merriweather", Arial, sans-serif;
     font-size: 36px;
@@ -137,6 +165,7 @@
     position: relative;
 }
 
+/* Мобильная версия подзаголовка */
 .transformation-stages__subtitle-mobile {
     font-family: "Golos Text", Arial, sans-serif;
     font-weight: 400;
@@ -146,6 +175,7 @@
     padding-top: 8px;
 }
 
+/* Мобильная версия изображения самолета */
 .transformation-stages__plane-mobile {
     position: absolute;
     z-index: 999;
@@ -155,12 +185,14 @@
     transform: translateX(-50%);
 }
 
+/* Мобильная версия контента */
 .transformation-stages__content-mobile {
     position: relative;
     display: none;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
 }
 
+/* Мобильная версия элемента */
 .transformation-stages__item-mobile {
     min-width: 100%;
     height: 300px;
@@ -169,10 +201,11 @@
     background-image: url("../../images/stages-cards-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
     width: 100%;
 }
 
+/* Скрытые и видимые элементы мобильной версии */
 .transformation-stages__item-mobile.hidden {
     opacity: 0;
 }
@@ -181,6 +214,7 @@
     opacity: 1;
 }
 
+/* Дополнительные отступы для мобильной версии */
 .description-margin-first {
     margin-top: 28px;
 }
@@ -193,6 +227,7 @@
     margin-top: 2px;
 }
 
+/* Номер элемента в мобильной версии */
 .transformation-stages__number-mobile {
     font-family: "Golos Text", Arial, sans-serif;
     width: 36px;
@@ -208,6 +243,7 @@
     position: absolute;
 }
 
+/* Описание элемента в мобильной версии */
 .transformation-stages__description-mobile {
     font-family: "Golos Text", Arial, sans-serif;
     font-weight: 500;
@@ -217,12 +253,14 @@
     padding-left: 14px;
 }
 
+/* Прогресс-бар для мобильной версии */
 .transformation-stages__progress-mobile {
     margin-top: 28px;
     display: none;
     justify-content: center;
 }
 
+/* Настройки управления прогресс-баром */
 .transformation-stages__control {
     width: 36px;
     height: 36px;
@@ -239,6 +277,7 @@
     background-color: #fbce51;
 }
 
+/* Настройки изображений внутри контролов */
 .transformation-stages__control img {
     vertical-align: middle;
     width: 17px;
@@ -255,6 +294,7 @@
     margin-left: 13px;
 }
 
+/* Настройки прогресс-бара */
 .transformation-stages__progress-bar {
     display: flex;
 }
@@ -272,6 +312,7 @@
     padding-left: 4px;
 }
 
+/* Стили для экранов от 0 до 479.98px */
 @media (min-width: 0px) and (max-width: 479.98px) {
     .transformation-stages {
         margin-top: 120px;
@@ -299,6 +340,7 @@
     }
 }
 
+/* Стили для экранов от 480 до 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
     .transformation-stages {
         margin-top: 120px;
@@ -327,6 +369,7 @@
     }
 }
 
+/* Стили для экранов от 576 до 767.98px */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .transformation-stages {
         margin-top: 120px;
@@ -355,6 +398,7 @@
     }
 }
 
+/* Стили для экранов от 768 до 1023.98px */
 @media (min-width: 768px) and (max-width: 1023.98px) {
     .transformation-stages {
         padding: 0 48px;
@@ -425,6 +469,7 @@
     }
 }
 
+/* Стили для экранов от 1024 до 1365.98px */
 @media (min-width: 1024px) and (max-width: 1365.98px) {
     .transformation-stages {
         padding: 0 72px;
@@ -495,6 +540,7 @@
     }
 }
 
+/* Стили для экранов от 1440px */
 @media (min-width: 1440px) {
     .transformation-stages {
         padding: 0 150px;
@@ -506,6 +552,7 @@
     }
 }
 
+/* Стили для экранов от 1680px */
 @media (min-width: 1680px) {
     .transformation-stages {
         padding: 0 250px;
@@ -517,6 +564,7 @@
     }
 }
 
+/* Стили для экранов от 1800px */
 @media (min-width: 1800px) {
     .transformation-stages {
         padding: 0 348px;

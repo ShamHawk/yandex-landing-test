@@ -1,4 +1,4 @@
-#slider-container {
+#participants-info-container {
     padding: 0 72px;
     overflow: hidden;
     margin-top: 200px;
@@ -6,31 +6,31 @@
     position: relative;
 }
 
-.slider {
+.participants-info {
     width: 100%;
 }
 
-.slider__header {
+.participants-info__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.slider__title {
+.participants-info__title {
     font-family: "Merriweather", Arial, sans-serif;
     font-size: 54px;
     font-weight: 400;
     text-transform: uppercase;
 }
 
-.slider__controls {
+.participants-info__controls {
     display: flex;
     align-items: center;
     justify-content: end;
     width: 240px;
 }
 
-.slider__control {
+.participants-info__control {
     width: 44px;
     height: 44px;
     border: none;
@@ -42,11 +42,11 @@
     transition: background-color 0.2s ease;
 }
 
-.slider__control:hover {
+.participants-info__control:hover {
     background-color: #fbce51;
 }
 
-.slider__control img {
+.participants-info__control img {
     vertical-align: middle;
     width: 17px;
     height: 17px;
@@ -54,69 +54,69 @@
     align-self: center;
 }
 
-.slider__control-left-img {
+.participants-info__control-left-img {
     padding-right: 4px;
 }
 
-.slider__control-right-img {
+.participants-info__control-right-img {
     padding-left: 4px;
 }
 
-.slider__counter {
+.participants-info__counter {
     margin: 0 14px;
     font-family: "Golos Text", Arial, sans-serif;
     font-size: 16px;
 }
 
-.slider__wrapper {
+.participants-info__wrapper {
     white-space: nowrap;
-    transition: transform 0.5s ease;
+    transition: transform 0.8s ease;
     margin-top: 60px;
 }
 
-.slider__item {
+.participants-info__item {
     width: calc(100% / 3);
     display: inline-block;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
 }
 
-.slider__item.hidden {
+.participants-info__item.hidden {
     opacity: 0;
 }
 
-.slider__item.visible {
+.participants-info__item.visible {
     opacity: 1;
 }
 
-.slider__item__img {
+.participants-info__item__img {
     padding: 0 37px;
     max-width: 394px;
     width: 100%;
     margin: 0 auto;
 }
 
-.slider__item__info {
+.participants-info__item__info {
     margin-top: 28px;
     text-align: center;
 }
 
-.slider__item__name {
+.participants-info__item__name {
     font-family: "Golos Text", Arial, sans-serif;
     font-size: 24px;
     color: #313131;
     font-weight: 600;
 }
 
-.slider__item__title {
+.participants-info__item__title {
     font-family: "Golos Text", Arial, sans-serif;
     font-size: 20px;
     color: #313131;
     font-weight: 400;
 }
 
-.slider__item__button {
+.participants-info__item__button {
     margin-top: 20px;
     border: 1px solid #3057a2;
     width: 113px;
@@ -131,53 +131,53 @@
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-.slider__item__button:hover {
+.participants-info__item__button:hover {
     background-color: #3057a2;
     color: #ffffff;
 }
 
 @media (min-width: 0px) and (max-width: 575.98px) {
-    #slider-container {
+    #participants-info-container {
         height: 584px;
         margin-top: 120px;
         margin-bottom: 100px;
         padding: 0 20px;
     }
 
-    .slider__title {
+    .participants-info__title {
         font-size: 36px;
         max-width: 300px;
     }
 
-    .slider__wrapper {
+    .participants-info__wrapper {
         margin-top: 40px;
     }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    #slider-container {
+    #participants-info-container {
         height: 584px;
         margin-top: 120px;
         margin-bottom: 100px;
         padding: 0 48px;
     }
 
-    .slider__title {
+    .participants-info__title {
         font-size: 36px;
         max-width: 500px;
     }
 
-    .slider__wrapper {
+    .participants-info__wrapper {
         margin-top: 68px;
     }
 }
 
 @media (min-width: 0px) and (max-width: 767.98px) {
-    .slider__item {
+    .participants-info__item {
         width: 100%;
     }
 
-    .slider__controls {
+    .participants-info__controls {
         justify-content: center;
         position: absolute;
         bottom: 0px;
@@ -186,7 +186,7 @@
         z-index: 999;
     }
 
-    .slider__item__img {
+    .participants-info__item__img {
         padding: 0;
         max-width: 244px;
         width: 100%;
@@ -195,21 +195,21 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
-    #slider-container {
+    #participants-info-container {
         margin-top: 120px;
         margin-bottom: 100px;
         padding: 0 48px;
     }
 
-    .slider__item {
+    .participants-info__item {
         width: 50%;
     }
 
-    .slider__title {
+    .participants-info__title {
         font-size: 36px;
     }
 
-    .slider__item__img {
+    .participants-info__item__img {
         max-width: 350px;
         width: 100%;
         margin: 0 auto;
@@ -217,29 +217,29 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1080px) {
-    .slider__item__name {
+    .participants-info__item__name {
         font-size: 20px;
     }
 
-    .slider__item__title {
+    .participants-info__item__title {
         font-size: 18px !important;
     }
 }
 
 @media (min-width: 1440px) {
-    #slider-container {
+    #participants-info-container {
         padding: 0 150px;
     }
 }
 
 @media (min-width: 1680px) {
-    #slider-container {
+    #participants-info-container {
         padding: 0 250px;
     }
 }
 
 @media (min-width: 1800px) {
-    #slider-container {
+    #participants-info-container {
         padding: 0 348px;
     }
 }

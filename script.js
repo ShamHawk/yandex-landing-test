@@ -17,10 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Инициализация функций в зависимости от контейнера
                 if (containerId.startsWith("marquee-container")) {
                     startMarqueeAnimation(containerId);
-                } else if (containerId === "slider-container") {
-                    initializeParticipantsSlider();
+                } else if (containerId === "participants-info-container") {
+                    initializeParticipantsCarousel();
                 } else if (containerId === "transformation-stages-container") {
-                    initializeStagesSlider();
+                    initializeStagesCarousel();
+                } else if (
+                    containerId === "header-container" &&
+                    "tournament-info-container"
+                ) {
+                    initializeSmoothScroll();
                 }
             })
             .catch((err) => console.error("Error loading content:", err));
@@ -37,7 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "transformation-stages-container",
         "./components/transformation-stages/transformation-stages.html"
     );
-    loadContent("slider-container", "./components/slider/slider.html");
+    loadContent(
+        "participants-info-container",
+        "./components/participants-info/participants-info.html"
+    );
     loadContent(
         "marquee-container-footer",
         "./components/marquee/marquee.html"
@@ -65,17 +73,22 @@ document.addEventListener("DOMContentLoaded", () => {
         animate();
     };
 
-    // Функция для инициализации слайдера участников
-    const initializeParticipantsSlider = () => {
-        const sliderContainer = document.getElementById("sliderContainer");
+    // Функция для инициализации карусели участников
+    const initializeParticipantsCarousel = () => {
+        const carouselContainer = document.getElementById(
+            "participantsContainer"
+        );
         const nextButton = document.getElementById("nextButton");
         const prevButton = document.getElementById("prevButton");
-        const counter = document.getElementById("sliderCounter");
+        const counter = document.getElementById("participantsCounter");
 
         let currentIndex = 0;
-        const numItems = document.querySelectorAll(".slider__item").length;
+        const numItems = document.querySelectorAll(
+            ".participants-info__item"
+        ).length;
         let startX = 0;
         let endX = 0;
+        let autoSlideInterval;
 
         const getItemsToShow = () =>
             window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
@@ -100,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const slide = () => {
             const itemsToShow = getItemsToShow();
             const offset = -currentIndex * (100 / itemsToShow);
-            sliderContainer.style.transform = `translateX(${offset}%)`;
+            carouselContainer.style.transform = `translateX(${offset}%)`;
             updateCounter();
             updateVisibility();
         };
 
         const updateVisibility = () => {
-            const items = document.querySelectorAll(".slider__item");
+            const items = document.querySelectorAll(".participants-info__item");
             const itemsToShow = getItemsToShow();
             items.forEach((item, index) => {
                 item.classList.toggle(
@@ -128,34 +141,54 @@ document.addEventListener("DOMContentLoaded", () => {
                 currentIndex++;
             else if (diff < -50 && currentIndex > 0) currentIndex--;
             slide();
+            resetAutoSlide();
+        };
+
+        const nextSlide = () => {
+            if (currentIndex < numItems - getItemsToShow()) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            slide();
+        };
+
+        const resetAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 4000);
         };
 
         nextButton.addEventListener("click", () => {
             if (currentIndex < numItems - getItemsToShow()) {
                 currentIndex++;
-                slide();
+            } else {
+                currentIndex = 0;
             }
+            slide();
+            resetAutoSlide();
         });
 
         prevButton.addEventListener("click", () => {
             if (currentIndex > 0) {
                 currentIndex--;
-                slide();
             }
+            slide();
+            resetAutoSlide();
         });
 
-        sliderContainer.addEventListener("touchstart", handleTouchStart);
-        sliderContainer.addEventListener("touchmove", handleTouchMove);
-        sliderContainer.addEventListener("touchend", handleTouchEnd);
+        carouselContainer.addEventListener("touchstart", handleTouchStart);
+        carouselContainer.addEventListener("touchmove", handleTouchMove);
+        carouselContainer.addEventListener("touchend", handleTouchEnd);
         window.addEventListener("resize", slide);
 
         updateCounter();
         updateVisibility();
+        autoSlideInterval = setInterval(nextSlide, 4000);
     };
 
-    // Функция для инициализации слайдера стадий трансформации
-    const initializeStagesSlider = () => {
-        const sliderContainer = document.querySelector(
+    // Функция для инициализации карусели стадий трансформации
+    const initializeStagesCarousel = () => {
+        const carouselContainer = document.querySelector(
             ".transformation-stages__content-mobile"
         );
         const nextButton = document.getElementById("nextStagesButton");
@@ -190,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const slide = () => {
             const offset = -currentIndex * 100;
-            sliderContainer.style.transform = `translateX(${offset}%)`;
+            carouselContainer.style.transform = `translateX(${offset}%)`;
             updateVisibility();
             updateDots();
             updateButtonVisibility();
@@ -217,15 +250,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        sliderContainer.addEventListener(
+        carouselContainer.addEventListener(
             "touchstart",
             (event) => (startX = event.touches[0].clientX)
         );
-        sliderContainer.addEventListener(
+        carouselContainer.addEventListener(
             "touchmove",
             (event) => (endX = event.touches[0].clientX)
         );
-        sliderContainer.addEventListener("touchend", () => {
+        carouselContainer.addEventListener("touchend", () => {
             const diff = startX - endX;
             if (Math.abs(diff) > 50) {
                 if (diff > 0 && currentIndex < numItems - 1)
@@ -238,5 +271,31 @@ document.addEventListener("DOMContentLoaded", () => {
         updateDots();
         updateVisibility();
         updateButtonVisibility();
+    };
+
+    // Плавная прокрутка
+    const initializeSmoothScroll = () => {
+        const buttons = document.querySelectorAll(
+            "#header-container .header__button-first, #header-container .header__button-second"
+        );
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const targetPosition =
+                        targetElement.getBoundingClientRect().top;
+                    const offset = targetPosition + window.scrollY;
+
+                    window.scrollTo({
+                        top: offset,
+                        behavior: "smooth",
+                    });
+                }
+            });
+        });
     };
 });
